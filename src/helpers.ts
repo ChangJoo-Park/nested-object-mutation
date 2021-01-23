@@ -5,16 +5,16 @@
  * @param action: Function If property is not object, do Action
  */
 function iterate(source: object, action: Function): void {
-  Object.keys(source).forEach((key) => {
-    const property = Reflect.get(source, key)
+  Object.keys(source).forEach(key => {
+    const property = Reflect.get(source, key);
     if (isObject(property)) {
-      iterate(property, action)
-      return
+      iterate(property, action);
+      return;
     }
     if (isFunction(action)) {
       action(source, key);
     }
-  })
+  });
 }
 
 /**
@@ -24,7 +24,7 @@ function iterate(source: object, action: Function): void {
  * @returns boolean If return true value is nullish
  */
 function isNullish(value: any): boolean {
-  return value === undefined || value === null
+  return value === undefined || value === null;
 }
 
 /**
@@ -34,7 +34,7 @@ function isNullish(value: any): boolean {
  * @returns boolean If return true value is Function
  */
 function isFunction(value: any): boolean {
-  return value !== null && typeof value === 'function'
+  return value !== null && typeof value === "function";
 }
 
 /**
@@ -47,5 +47,4 @@ function isObject(value: any): boolean {
   return value === Object(value);
 }
 
-
-export { iterate, isNullish, isFunction, isObject }
+export { iterate, isNullish, isFunction, isObject };

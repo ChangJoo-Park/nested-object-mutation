@@ -7,11 +7,10 @@ import { isNullish, iterate } from "./helpers";
  * @param source Object has nullish or not
  * @param key source's key
  */
-function doRemove (source: object, key: string) {
+function doRemove(source: object, key: string) {
   if (!Reflect.has(source, key)) return;
 
-  if (isNullish(Reflect.get(source, key)))
-    Reflect.deleteProperty(source, key);
+  if (isNullish(Reflect.get(source, key))) Reflect.deleteProperty(source, key);
 }
 
 /**
@@ -22,9 +21,9 @@ function doRemove (source: object, key: string) {
  * @returns Object
  */
 function removeNullish(source: object) {
-  const result = Object.assign({}, source)
-  iterate(result, doRemove)
-  return result
+  const result = Object.assign({}, source);
+  iterate(result, doRemove);
+  return result;
 }
 
-export { removeNullish }
+export { removeNullish };

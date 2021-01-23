@@ -1,1 +1,1 @@
-import './removeNullish.test'
+import "./removeNullish.test";
