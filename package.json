@@ -1,11 +1,11 @@
 {
-  "name": "nested-object-mutation",
+  "name": "nested-object-mutator",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/changjoo-park/nested-object-mutation",
+  "homepage": "https://github.com/changjoo-park/nested-object-mutator",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/nested-object-mutation.esm.js",
+  "module": "dist/nested-object-mutator.esm.js",
   "engines": {
     "node": ">=12"
   },
@@ -23,8 +23,8 @@
     "prepare": "tsdx build"
   },
   "keywords": [],
-  "author": "AUTHOR NAME CHANGE <example@example.com>",
-  "bugs": "https://github.com/changjoo-park/nested-object-mutation/issues",
+  "author": "ChangJoo Park <pcjpcj2@gmail.com>",
+  "bugs": "https://github.com/changjoo-park/nested-object-mutator/issues",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
