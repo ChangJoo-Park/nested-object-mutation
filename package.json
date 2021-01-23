@@ -1,11 +1,11 @@
 {
-  "name": "typescript-library-template",
+  "name": "nested-object-mutation",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/changjoo-park/typescript-library-template#readme",
+  "homepage": "https://github.com/changjoo-park/nested-object-mutation",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/typescript-library-template.esm.js",
+  "module": "dist/nested-object-mutation.esm.js",
   "engines": {
     "node": ">=12"
   },
@@ -24,12 +24,10 @@
   },
   "keywords": [],
   "author": "AUTHOR NAME CHANGE <example@example.com>",
-  "bugs": "https://github.com/changjoo-park/typescript-library-template/project/issues",
+  "bugs": "https://github.com/changjoo-park/nested-object-mutation/issues",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "@types/lodash.kebabcase": "^4.1.6",
-    "@types/prompts": "^2.0.9",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
@@ -40,13 +38,10 @@
     "eslint-plugin-standard": "^5.0.0",
     "husky": "^4.3.8",
     "lodash.kebabcase": "^4.1.1",
-    "prompts": "^2.4.0",
     "rimraf": "^3.0.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
     "typedoc": "^0.20.16",
-    "typescript": "^4.1.3",
-    "username": "^5.1.0",
-    "validate-npm-package-name": "^3.0.0"
+    "typescript": "^4.1.3"
   }
 }
