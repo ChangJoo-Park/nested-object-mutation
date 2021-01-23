@@ -1,33 +1,17 @@
-function iterate(obj: object, action: Function) {
-  Object.keys(obj).forEach((key) => {
-    const property = getProperty(obj, key)
-    if (isObject(property)) {
-      iterate(property, action)
-      return
-    }
-    if (action != null && typeof action === 'function') {
-      action(obj, key);
-    }
-  })
-}
+// @ts-ignore
+import { isNullish, iterate } from "./helpers";
 
-function getProperty(o: any, propertyName: string): any {
-  return o[propertyName];
-}
-
-function isNullish(value: any): boolean {
-  return value === undefined || value === null
-}
-
-function isObject(value: any): boolean {
-  return value === Object(value);
-}
-
+/**
+ * Do remove nullish
+ *
+ * @param source Object has nullish or not
+ * @param key source's key
+ */
 function doRemove (source: object, key: string) {
-  const property = getProperty(source, key)
-  if (isNullish(property)) {
+  if (!Reflect.has(source, key)) return;
+
+  if (isNullish(Reflect.get(source, key)))
     Reflect.deleteProperty(source, key);
-  }
 }
 
 /**

@@ -18,7 +18,7 @@
     "build": "tsdx build",
     "build:docs": "typedoc --out docs/ src/",
     "test": "tsdx test --coverage",
-    "test:watch": "tsdx test --watch",
+    "test:watch": "tsdx test --watchAll",
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
@@ -28,9 +28,11 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@types/benchmark": "^2.1.0",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
+    "benchmark": "^2.1.4",
     "eslint": "^7.18.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
