@@ -1,6 +1,6 @@
 {
   "name": "nested-object-mutator",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "homepage": "https://github.com/changjoo-park/nested-object-mutator",
   "main": "dist/index.js",
@@ -22,7 +22,15 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
-  "keywords": [],
+  "keywords": [
+    "deep",
+    "nested",
+    "object",
+    "nullish",
+    "remove",
+    "null",
+    "undefined"
+  ],
   "author": "ChangJoo Park <pcjpcj2@gmail.com>",
   "bugs": "https://github.com/changjoo-park/nested-object-mutator/issues",
   "license": "MIT",
