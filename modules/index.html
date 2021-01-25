@@ -83,14 +83,93 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module">
 					<a name="default" class="tsd-anchor"></a>
 					<h3>default</h3>
-					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>removeNullish<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>getByKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, delimiter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>removeNullish<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>remove<wbr>Nullish<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+								<h5>get<wbr>ByKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, delimiter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-literal">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span>, target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, delimiter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>FindKey by key string</p>
+													</div>
+													<p>can use dot notation for deep nested value</p>
+													<p>eg:</p>
+													<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">NOM</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;nested-object-mutator&#039;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">source</span><span style="color: #000000"> = {</span>
+<span style="color: #000000"> </span><span style="color: #001080">a:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000"> </span><span style="color: #001080">b:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #001080">c:</span><span style="color: #000000"> </span><span style="color: #098658">2</span>
+<span style="color: #000000"> }</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #0070C1">NOM</span><span style="color: #000000">.</span><span style="color: #795E26">getByKey</span><span style="color: #000000">(</span><span style="color: #001080">source</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;a.b.c&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;.&quot;</span><span style="color: #000000">)</span>
+
+<span style="color: #001080">The</span><span style="color: #000000"> </span><span style="color: #001080">result</span><span style="color: #000000"> </span><span style="color: #001080">is</span><span style="color: #000000"> </span><span style="color: #A31515">`2`</span><span style="color: #000000">. </span><span style="color: #001080">return</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> </span><span style="color: #AF00DB">if</span><span style="color: #000000"> </span><span style="color: #001080">not</span><span style="color: #000000"> </span><span style="color: #001080">exists</span><span style="color: #000000">.</span>
+</code></pre>
+												</div>
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>source: <span class="tsd-signature-type">object</span></h5>
+													</li>
+													<li>
+														<h5>target: <span class="tsd-signature-type">string</span></h5>
+														<div class="tsd-comment tsd-typography">
+															<p>target key.</p>
+														</div>
+													</li>
+													<li>
+														<h5>delimiter: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;.&quot;</span></h5>
+														<div class="tsd-comment tsd-typography">
+															<p>default delimiter is <code>.</code></p>
+														</div>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												<p>true if exist</p>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>remove<wbr>Nullish<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-literal">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Remove Nullish value.</p>
+													</div>
+													<p>nullish : undefined, null</p>
+												</div>
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>source: <span class="tsd-signature-type">object</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></h4>
+												<p>Object</p>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -102,6 +181,9 @@
 				<ul>
 					<li class=" ">
 						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="getbykey.html">get<wbr>ByKey</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="helpers.html">helpers</a>
