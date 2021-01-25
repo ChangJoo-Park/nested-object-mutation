@@ -26,16 +26,6 @@ function isNullish(value: any): boolean {
 }
 
 /**
- * Check parameter is Function
- *
- * @param value
- * @returns boolean If return true value is Function
- */
-function isFunction(value: any): boolean {
-  return value !== null && typeof value === "function";
-}
-
-/**
  * Check parameter is Object
  *
  * @param value
@@ -45,4 +35,4 @@ function isObject(value: any): boolean {
   return value === Object(value);
 }
 
-export { iterate, isNullish, isFunction, isObject };
+export { iterate, isNullish, isObject };
