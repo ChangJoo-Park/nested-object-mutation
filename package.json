@@ -1,6 +1,6 @@
 {
   "name": "nested-object-mutator",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "homepage": "https://github.com/changjoo-park/nested-object-mutator",
   "main": "dist/index.js",
@@ -17,6 +17,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "build:docs": "typedoc --out docs/ src/",
+    "pretest": "npm run lint",
     "test": "tsdx test --coverage",
     "test:watch": "tsdx test --watchAll",
     "lint": "tsdx lint",

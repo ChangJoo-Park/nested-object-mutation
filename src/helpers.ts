@@ -11,9 +11,7 @@ function iterate(source: object, action: Function): void {
       iterate(property, action);
       return;
     }
-    if (isFunction(action)) {
-      action(source, key);
-    }
+    action(source, key);
   });
 }
 

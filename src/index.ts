@@ -1,6 +1,7 @@
-// @ts-ignore
-import { removeNullish } from "./removeNullish.ts";
+import { removeNullish } from "./removeNullish";
+import { getByKey } from "./getByKey";
 
 export default {
-  removeNullish
+  removeNullish,
+  getByKey
 };

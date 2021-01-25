@@ -37,3 +37,20 @@ const result = NOM.removeNullish(source)
 // The result is `{b: {}, e: {f: {}}}`
 ```
 
+
+### Find Value using dot notation key
+
+```ts
+import NOM from 'nested-object-mutator'
+
+const source = {
+  a: 1,
+  b: {
+    c: 2
+  }
+}
+
+const result = NOM.getByKey(source, "a.b.c", "." /** default delimiter is `.` can omit */)
+
+// The result is `2`. return null if not exists.
+```
