@@ -8,8 +8,9 @@ import { isNullish, iterate } from "./helpers";
  * @param key source's key
  */
 function doRemove(source: object, key: string) {
-  if (!Reflect.has(source, key)) return;
-  if (isNullish(Reflect.get(source, key))) Reflect.deleteProperty(source, key);
+  if (isNullish(Reflect.get(source, key))) {
+    Reflect.deleteProperty(source, key);
+  }
 }
 
 /**
